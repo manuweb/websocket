@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Test WebSocket</title>
+  <link rel="stylesheet" href="lib/css/framework7.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/icon.png">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+
+ 
+   <div id="app">     <!-- App root element -->
+                          
+        <div class="statusbar"></div>   <!-- Statusbar overlay -->
+        
+        <div class="panel panel-left panel-cover">
+            <div class="page">
+                <div class="page-content">
+
+                        <div class="list">
+                            <ul>
+                              <li>
+                                <a href="javascript:ir_a_vista('#tab-1');" class="item-content item-link">
+                                    <div class="item-media">
+                                        <i class="icon f7-icons ios-only">home_fill</i>
+                                        <i class="icon material-icons md-only">home</i>
+                                    </div>
+                                  <div class="item-inner">
+                                    <div class="item-title">Inicio</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="javascript:ir_a_vista('#tab-2');" class="item-content item-link">
+                                    <div class="item-media">
+                                        <i class="icon mapa-icon"></i>
+                                    </div>
+                                  <div class="item-inner">
+                                    <div class="item-title">Mapa</div>
+                                  </div>
+                                </a>
+                              </li>
+                              
+                            </ul>
+                        </div> 
+
+      
+                </div>
+            </div>
+        </div> <!-- panel-left -->
+    
+
+        <div class="view view-main view-init ios-edges" data-url="/">
+ 
+            <div class="page">
+                
+                <div class="navbar color-theme-white" >
+                    <div class="navbar-inner text-color-blue">
+                        <div class="left">
+                          
+                        </div>
+                        <div class="title sliding">Test WebSocket</div>
+                        <div class="right">
+                          <a href="#" class="link icon-only panel-open" data-panel="left">
+                            <i class="icon f7-icons ios-only">menu</i>
+                            <i class="icon material-icons md-only">menu</i>
+                          </a>
+                        </div>
+                
+                    </div>
+                </div> <!-- navbar -->
+ 
+                <div class="toolbar tabbar tabbar-labels toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                      <a href="#tab-1" class="tab-link tab-link-active">
+                        <!-- Different icons for iOS and MD themes -->
+                        <i class="icon f7-icons ios-only">home_fill</i>
+                        <i class="icon material-icons md-only">home</i>
+                        <!-- Label text -->
+                        <span class="tabbar-label">Inicio</span>
+                      </a>
+                      <a href="#tab-2" class="tab-link">
+                        <i class="icon mapa-icon"></i>
+                        <span class="tabbar-label">Mapa</span>
+                      </a>
+                     
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    
+                    <div id="tab-1" class="page-content tab tab-active hide-navbar-on-scroll">
+ 
+                         <div class="block">
+
+                            <p>Bienvenidos a <b>Test WebSocket</b></p>
+                            <p><img src='img/logo.png' width='100%' height='auto'></p>
+                            <p>Versión: <b><span id='version'></span></b></p>
+                        
+                        </div>
+                    
+     
+
+                        
+                    </div> <!-- TAB1 -->
+                               
+                               
+                     
+                                      
+                               
+                               
+                               
+                               
+
+                    <div id="tab-2" class="page-content tab hide-navbar-on-scroll" style="padding-top:0;">
+                     
+                               <div id="contenedoramapaGoogle"><div id="map"></div></div>  
+                        
+                    </div> <!-- TAB2 -->
+                    
+                   
+                   
+       
+                          
+                    
+
+                </div> <!-- TABS -->
+                
+            </div> <!-- page -->
+            
+            
+            
+        </div> <!-- view-main -->
+                   
+
+        
+  </div> <!-- app -->
+
+
+               
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="lib/js/framework7.min.js"></script>
+
+
+    <script src="js/app.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDI08uvgYAFANIZVM4R4y-WPZJq_p1sZng&callback=initMap">
+    </script>      
+    <script type="text/javascript" src="js/CustomGoogleMapMarker.js"></script>
+    <script>
+        
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+    
+</body>
+</html>
