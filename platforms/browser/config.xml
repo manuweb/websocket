@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.manuweb.testwinsocket" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Test WinSocket</name>
+    <description>
+        Test de wondoskets
+    </description>
+    <author email="info@elmaestroweb.es" href="https://www.elmaestroweb.es">
+        Manuel Sanchez
+    </author>
+    <content src="index.html" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysAndWhenInUseUsageDescription">
+        <string>Necesario para marcar tu posición siempre</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
+        <string>Necesario para marcar tu posición cuando la app está en segundo plano</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>Necesario para marcar tu posición</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="UIBackgroundModes">
+        <array>
+            <string>fetch</string>
+            <string>location</string>
+        </array>
+    </edit-config>
+    <gap:config-file mode="replace" parent="CFBundleLocalizations" platform="ios">
+        <array>
+            <string>es</string>
+        </array>
+    </gap:config-file>
+    <access origin="https://*.websocket.in" subdomains="true" />
+    <allow-navigation href="https://www.websocket.in" />
+    <access origin="https://www.elmaestroweb.es" subdomains="true" />
+    <allow-navigation href="https://www.elmaestroweb.es" />
+    <allow-navigation href="https://www.google.com" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="*" />
+    <access origin="http://phonegap.com" subdomains="true" />
+    <access origin="*" />
+    <access origin="http://*.google.com" />
+    <access origin="http://maps.google.com" />
+    <access origin="https://maps.googleapis.com" />
+    <access origin="https://google.com" />
+    <access origin="http://google.com" />
+    <access origin="*.google.com" />
+    <access origin="*.googleapis.com" />
+    <access origin="*.gstatic.com" />
+    <access origin="*.websocket.in" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="SplashScreenDelay" value="3500" />
+    <preference name="FadeSplashScreenDuration" value="1500" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
+    <preference name="StatusBarStyle" value="default" />
+</widget>
